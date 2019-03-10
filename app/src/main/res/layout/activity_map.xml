@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:elevation="10dp"
+        android:background="@drawable/white_border"
+        android:id="@+id/rel_layout"
+        android:focusableInTouchMode="true"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"
+            android:layout_centerVertical="true"
+            android:layout_margin="12dp"
+            android:id="@+id/search_icon"
+             />
+        <AutoCompleteTextView
+            android:id="@+id/input_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/search_icon"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:hint="Enter City name or Zip Code"
+            android:background="@null"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            />
+
+
+    </RelativeLayout>
+
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+         android:layout_marginBottom="50dp"
+        app:sdMainFabClosedBackgroundColor="@android:color/white"
+        app:sdMainFabOpenedBackgroundColor="@color/white_c"
+
+        app:sdMainFabClosedSrc="@drawable/ic_layers" />
+
+    <ImageView
+        android:id="@+id/ic_gps"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:layout_alignParentEnd="true"
+         android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+         android:layout_below="@id/rel_layout"
+        android:layout_marginBottom="65dp"
+        android:src="@drawable/ic_gps" />
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather_demo</string>
+    <string name="OPEN_WEATHER_MAP_API_KEY">5dde7cf28968da7a9cb5f690ee6c5fac</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
